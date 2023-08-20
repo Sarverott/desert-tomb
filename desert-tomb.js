@@ -1,7 +1,8 @@
-/*#   Sarverott @ 2k23   #*/
+/*#   Sarverott @ 2k23 - vue.js components generator   #*/
 class DesertTomb{
   static enter(elementLabel){
     this.el=elementLabel;
+    this.props=[];
     return this;
   }
   static fromPapyrus(dataObject){
@@ -20,14 +21,25 @@ class DesertTomb{
   static setTrap(label, action){
     if(!this.hasOwnProperty("methods"))this.methods={};
     this.methods[label]=action;
+    return this;
   }
   static sealing(){
-    this.gate=new Vue(this);
+    window.onload=function(){
+      DesertTomb.gate=new Vue({
+        el:DesertTomb.el,
+        data:DesertTomb.data,
+        methods:DesertTomb.methods
+      });
+    }
   }
-  constructor(componentName, rootTag, attrBook={}){
+  constructor(name, rootTag, attrBook={}){
     this.scrollName=name;
     this.scrollType=rootTag;
     this.scrollDescription=attrBook;
+    this.data=function(){return {}};
+    this.props=[];
+    this.methods={};
+    this.innerTemplate=`<slot></slot>`;
   }
   structureInside(innerTemplate){
     this.innerTemplate=innerTemplate;
@@ -51,7 +63,7 @@ class DesertTomb{
     this.template+=`>
       ${this.innerTemplate}
     </${this.scrollType.toLowerCase()}>`;
-    Vue.component(componentName, this);
+    Vue.component(this.scrollName, this);
     return this.constructor;
   }
 }
