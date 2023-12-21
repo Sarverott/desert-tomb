@@ -1,2 +1,2 @@
 # desert-tomb
-custom tumblr blog generation template engine. using vue.js
+custom blog generation template engine. using vue.js
