@@ -53,7 +53,7 @@ class DesertTomb{
     this.data=tresure;
     return this;
   }
-  entumb(){
+  get entumb(){
     if(!this.scrollDescription.hasOwnProperty("class"))this.scrollDescription.class="";
     this.scrollDescription.class+=" "+this.scrollName;
     this.template="<"+this.scrollType.toLowerCase();
