@@ -1,0 +1,28 @@
+{
+  "name": "desert-tomb",
+  "version": "1.0.0",
+  "description": "custom generation template engine. using vue.js",
+  "main": "desert-tomb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarverott/desert-tomb.git"
+  },
+  "keywords": [
+    "template",
+    "wrapper",
+    "browser",
+    "desert",
+    "tomb",
+    "tumblr",
+    "blogspot"
+  ],
+  "author": "Sett Sarverott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sarverott/desert-tomb/issues"
+  },
+  "homepage": "https://github.com/Sarverott/desert-tomb#readme"
+}
